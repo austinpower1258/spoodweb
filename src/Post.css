@@ -1,0 +1,34 @@
+.post-container {
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-label {
+  display: block;
+  margin-top: 20px;
+  font-size: 24px;
+}
+
+.post-input {
+  display: block;
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #ccc;
+  width: 50%;
+}
+
+.image-preview {
+  margin-top: 40px;
+  border: 2px solid #ccc;
+  padding: 20px;
+  width: 25%;
+  height: 25%;
+}
+
+.image-preview img {
+  width: 100%;
+  height: auto;
+}
