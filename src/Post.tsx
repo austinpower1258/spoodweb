@@ -2,10 +2,15 @@ import React, { useState } from 'react';
 import './Post.css';
 
 const Post: React.FC = () => {
+  const [restaurantName, setRestaurantName] = useState('');
   const [dishName, setDishName] = useState('');
   const [rating, setRating] = useState(0);
   const [file, setFile] = useState<File | null>(null);
   const [previewUrl, setPreviewUrl] = useState<string | null>(null);
+
+  const handleRestaurantNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setRestaurantName(event.target.value);
+  };
 
   const handleDishNameChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setDishName(event.target.value);
@@ -26,6 +31,10 @@ const Post: React.FC = () => {
   return (
     <div className="post-container">
       <h1>Post A Dish</h1>
+      <label className="post-label">
+        Restaurant Name:
+        <input type="text" className="post-input" value={restaurantName} onChange={handleRestaurantNameChange} />
+      </label>
       <label className="post-label">
         Dish Name:
         <input type="text" className="post-input" value={dishName} onChange={handleDishNameChange} />
